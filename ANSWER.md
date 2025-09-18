@@ -1,4 +1,4 @@
-1. Anda diminta merancang sistem backend untuk aplikasi e-commerce yang mendukung 10.000 pengguna bersamaan. Sistem ini terdiri dari beberapa layanan: API Gateway, User Service, Product Service, dan Order Service, semuanya berjalan secara independen. Jelaskan :
+### 1. Anda diminta merancang sistem backend untuk aplikasi e-commerce yang mendukung 10.000 pengguna bersamaan. Sistem ini terdiri dari beberapa layanan: API Gateway, User Service, Product Service, dan Order Service, semuanya berjalan secara independen. Jelaskan :
 - a. Bagaimana Anda akan menerapkan load balancing secara efisien antar instance layanan?
 - b. Bagaimana Anda akan mengelola session state secara terdistribusi tanpa menggunakan session pada server?
 - c. Jelaskan dengan rinci bagaimana Anda bisa menggunakan caching (misalnya Redis) untuk meminimalkan beban ke database.
@@ -200,13 +200,19 @@ app.listen(3000, () =>
 
 ### Cara Menjalankan
 Masuk ke folder project:
+```
 cd example-logger
+```
 
 Install dependency:
+```
 npm install
+```
 
 Jalankan server:
+```
 npm start
+```
 
 Tes login (via Postman atau curl):
 body : 
@@ -216,15 +222,14 @@ body :
   "password": "123"
 }
 ```
-
+```
 curl -X POST http://localhost:3000/login \
   -H "Content-Type: application/json" \
   -d '{"username":"admin","password":"123"}'
-
+```
 ---
 
 ### 3. Optimasi Render 1000 Item di React
-
 **a. Akar Permasalahan:**  
 - Setiap kali filter berubah, seluruh 1000 item di-render ulang.  
 - Tidak ada mekanisme untuk mencegah re-render pada item yang sebenarnya tidak berubah.  
