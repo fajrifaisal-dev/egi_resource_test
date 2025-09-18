@@ -1,8 +1,7 @@
 1. Anda diminta merancang sistem backend untuk aplikasi e-commerce yang mendukung 10.000 pengguna bersamaan. Sistem ini terdiri dari beberapa layanan: API Gateway, User Service, Product Service, dan Order Service, semuanya berjalan secara independen. Jelaskan :
-
-a. Bagaimana Anda akan menerapkan load balancing secara efisien antar instance layanan?
-b. Bagaimana Anda akan mengelola session state secara terdistribusi tanpa menggunakan session pada server?
-c. Jelaskan dengan rinci bagaimana Anda bisa menggunakan caching (misalnya Redis) untuk meminimalkan beban ke database.
+- a. Bagaimana Anda akan menerapkan load balancing secara efisien antar instance layanan?
+- b. Bagaimana Anda akan mengelola session state secara terdistribusi tanpa menggunakan session pada server?
+- c. Jelaskan dengan rinci bagaimana Anda bisa menggunakan caching (misalnya Redis) untuk meminimalkan beban ke database.
 
 JAWABAN :
 ## a. Load Balancing Antar Instance Layanan saya pake Case Alibaba Cloud Server sepengalaman saya :
@@ -74,7 +73,7 @@ sequenceDiagram
 - Kalau tidak ada → query database → simpan hasil ke Redis → kembalikan ke client.
 - Kalau ada → langsung ambil dari Redis.
 
-
+___________________________________________________________________________________________________________<br>
 3. Aplikasi React Anda memiliki 1000 item dalam daftar, dan ketika user scroll, performa jadi rendah. Ini terjadi karena re-render berulang, terutama saat filter digunakan. Jelaskan:
 Apa akar permasalahannya?
 Bagaimana cara mengoptimalkannya?
