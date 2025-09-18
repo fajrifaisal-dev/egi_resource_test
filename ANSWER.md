@@ -43,7 +43,7 @@ sequenceDiagram
 
 saya menggunakan Token JWT untuk Session agar sistemnya bisa Stateless dan tidak bergantung ke server
 contoh sequence alur yang saya maksud :
-```
+```mermaid
 sequenceDiagram
     participant Client
     participant API as API Gateway / Service
@@ -73,3 +73,12 @@ sequenceDiagram
 - Aplikasi cek cache dulu di sisi FE .
 - Kalau tidak ada → query database → simpan hasil ke Redis → kembalikan ke client.
 - Kalau ada → langsung ambil dari Redis.
+
+
+3. Aplikasi React Anda memiliki 1000 item dalam daftar, dan ketika user scroll, performa jadi rendah. Ini terjadi karena re-render berulang, terutama saat filter digunakan. Jelaskan:
+Apa akar permasalahannya?
+Bagaimana cara mengoptimalkannya?
+
+jawaban :
+
+a.)
